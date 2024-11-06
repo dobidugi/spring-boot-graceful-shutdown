@@ -1,0 +1,29 @@
+### 첫 번째 요청 (즉시 전송)
+POST http://localhost:8080/graceful
+Content-Type: application/json
+
+{
+  "sequence": 1
+}
+
+### 기다림 (10초 딜레이 후 두 번째 요청 전송)
+> await 10000
+
+### 두 번째 요청
+POST http://localhost:8080/graceful
+Content-Type: application/json
+
+{
+  "sequence": 2
+}
+
+### 기다림 (20초 딜레이 후 세 번째 요청 전송)
+> await 20000
+
+### 세 번째 요청
+POST http://localhost:8080/graceful
+Content-Type: application/json
+
+{
+  "sequence": 3
+}

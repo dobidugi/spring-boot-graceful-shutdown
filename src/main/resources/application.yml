@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: "Graceful Shutdown Test"
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+server:
+  shutdown: graceful
